@@ -3,12 +3,14 @@ import { Link } from 'gatsby';
 // import '../styles/bulma.scss';
 
 import Layout from '../components/layout';
+import Intro from '../components/intro';
 import Image from '../components/image';
 import SEO from '../components/seo';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <Intro />
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>

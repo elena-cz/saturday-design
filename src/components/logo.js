@@ -3,7 +3,7 @@ import React from 'react';
 const Logo = props => (
   <svg
     viewBox="0 0 775 284.78"
-    style={{ height: '100%', width: 'auto' }}
+    style={{ height: 'auto', width: '100%' }}
     {...props}
   >
     <circle cx={115} cy={115} r={115} fill="#ffeb3b" />
