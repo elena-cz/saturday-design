@@ -1,43 +1,48 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import styles from './intro.module.scss';
 
-import Title from './title';
 import ContactIcons from './contactIcons';
 
-const Intro = () => (
-  <section className={styles.section}>
-    <Title text="title" htag="h1" />
-    <Title text="projects" htag="h2" />
+const Intro = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        profilePhoto: file(relativePath: { eq: "profilephoto.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 250, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `
+  );
 
-    <Link className="link-button">learn more</Link>
-    <h1>projects</h1>
-    <h2>tools</h2>
-    <h3>
-      people-focused <strong>developer & designer</strong>
-    </h3>
-    <p className="hero-p thin-font">
-      I create amazing web experiences that are thoughtfully designed for
-      everyone involved - from intuitive interfaces for users, easy-to-read code
-      for teammates, and focused objectives for business managers.
-    </p>
+  return (
+    <section className={styles.section}>
+      <div className={styles.profileContainer}>
+        <Img
+          fluid={data.profilePhoto.childImageSharp.fluid}
+          alt="Profile Photo"
+          className={styles.profilePhoto}
+        />
+      </div>
+      <div>
+        <h4>
+          people-focused <strong>developer & designer</strong>
+        </h4>
+        <p className="hero-p thin-font">
+          I create amazing web experiences that are thoughtfully designed for
+          everyone involved - from intuitive interfaces for users, easy-to-read
+          code for teammates, and focused objectives for business managers.
+        </p>
 
-    <ContactIcons />
-    <p>
-      I create amazing web experiences that are thoughtfully designed for
-      everyone involved - from intuitive interfaces for users, easy-to-read code
-      for teammates, and focused objectives for business managers.
-    </p>
-  </section>
-);
-
-Intro.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Intro.defaultProps = {
-  siteTitle: ``,
+        <ContactIcons />
+      </div>
+    </section>
+  );
 };
 
 export default Intro;
