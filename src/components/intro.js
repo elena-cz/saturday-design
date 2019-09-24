@@ -30,9 +30,9 @@ const Intro = () => {
         />
       </div>
       <div>
-        <h5>
+        <h4>
           people-focused <strong>developer & designer</strong>
-        </h5>
+        </h4>
         <p className="hero-p thin-font">
           I create web experiences that are thoughtfully designed for everyone
           involved&mdash;from intuitive interfaces for users, easy-to-read code

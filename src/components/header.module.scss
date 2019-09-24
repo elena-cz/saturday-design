@@ -1,3 +1,5 @@
+@import '../styles/mixins.scss';
+
 .header {
   grid-area: header;
   display: flex;
@@ -10,7 +12,13 @@
 
 .logoContainer {
   height: auto;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
-  margin-left: -18%;
+  margin-left: -10%;
+}
+
+@include respond-to('small') {
+  .logoContainer {
+    margin-left: 0;
+  }
 }

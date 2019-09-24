@@ -59,7 +59,7 @@ $font-family-thin: 'WoodfordBourne_Thin', serif;
 $font-family-bold: 'WoodfordBourne_Bold', serif;
 
 // Base Font for HTML
-$base-font-size: 16px;
+$base-font-size: 20px;
 
 // Paragraph Styles
 $paragraph-color: $indigo;
@@ -116,7 +116,7 @@ h6 {
   margin-top: $header-margin * 1.5;
   color: $header-color;
   line-height: $header-line-height;
-  font-weight: 700;
+  font-weight: normal;
 
   &:first-child {
     margin-top: 0;
@@ -126,21 +126,18 @@ h6 {
 h1 {
   font-family: $font-family-bold;
   font-size: $header-size;
-  font-weight: normal;
   margin-bottom: $header-margin;
 }
 
 h2 {
   font-family: $font-family-bold;
   font-size: $header-size / 1.3;
-  font-weight: normal;
   margin-bottom: $header-margin / 1.2;
 }
 
 h3 {
   font-size: $header-size / 1.5;
   margin-bottom: $header-margin / 1.5;
-  font-weight: normal;
 }
 
 h4 {
@@ -149,6 +146,7 @@ h4 {
 }
 
 h5 {
+  font-family: $font-family-thin;
   font-size: $header-size / 2;
   margin-bottom: $header-margin / 2;
 }
@@ -331,7 +329,7 @@ b,
 }
 
 .hero-p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .h1-underline,
@@ -356,6 +354,7 @@ b,
   padding: 0.4em;
   margin: $paragraph-margin 0;
   text-decoration: none;
+  font-size: inherit;
   border: 2px solid $pink;
   background: linear-gradient(to bottom, $pink 0%, $pink 100%);
   background-position: 0 100%;

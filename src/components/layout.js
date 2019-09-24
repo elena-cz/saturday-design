@@ -28,9 +28,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        © {new Date().getFullYear()} Elena Czubiak
       </footer>
     </div>
   );

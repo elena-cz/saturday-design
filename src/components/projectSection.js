@@ -9,7 +9,23 @@ const ProjectSection = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        profilePhoto: file(relativePath: { eq: "profilephoto.jpg" }) {
+        imagination: file(
+          relativePath: { eq: "ImaginationDeviceScreens.png" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        mastermind: file(relativePath: { eq: "MastermindScreenshot.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 250, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        auction: file(relativePath: { eq: "AuctionKingScreenshot.png" }) {
           childImageSharp {
             fluid(maxWidth: 250, quality: 90) {
               ...GatsbyImageSharpFluid
@@ -23,6 +39,32 @@ const ProjectSection = () => {
   return (
     <section className={styles.section}>
       <Title text="projects" htag="h2" />
+
+      <div className={styles.featuredContainer}>
+        <Img
+          fluid={data.imagination.childImageSharp.fluid}
+          alt="Mindy's Imagination Thumbnail"
+          className={styles.featuredImage}
+        />
+        <div className={styles.featuredText}>
+          <h5>Mindy's Imagination</h5>
+          <a
+            href="https://mindysimagination.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`link-button ${styles.linkButton}`}
+          >
+            mindysimagination.com
+          </a>
+
+          <p>
+            Mindy&apos;s Imagination is an app I designed and built to showcase
+            my mom&apos;s unique and accessible meditation techniques. It is a
+            fully functional PWA (Progressive Web App) that works on nearly
+            every device, with offline access to all content.
+          </p>
+        </div>
+      </div>
     </section>
   );
 };
