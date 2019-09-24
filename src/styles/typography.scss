@@ -328,3 +328,19 @@ img {
 .hero-p {
   font-size: 1.5rem;
 }
+
+.h1-underline,
+.h2-underline {
+  background-color: $pink;
+  width: 100%;
+}
+
+.h1-underline {
+  height: $header-size / 4;
+  margin-top: -($header-margin * 1.8);
+}
+
+.h2-underline {
+  height: ($header-size / 1.2) / 4;
+  margin-top: -(($header-margin * 1.75) / 1.2);
+}

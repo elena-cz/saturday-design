@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './intro.module.scss';
 
+import Title from './title';
+
 const Intro = () => (
   <section>
+    <Title text="title" htag="h1" />
+    <Title text="projects" htag="h2" />
     <h1>projects</h1>
     <h2>tools</h2>
     <h3>
