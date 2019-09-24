@@ -1,0 +1,54 @@
+@import '../styles/mixins.scss';
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1.5rem -6px;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100px;
+  margin: 10px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  max-height: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.svg {
+  height: auto;
+  max-height: 90px;
+  width: 100%;
+  max-width: 90px;
+}
+
+@include respond-to('small') {
+  .tool {
+    width: 75px;
+    margin: 6px;
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .svg {
+    max-height: 60px;
+    max-width: 60px;
+  }
+}

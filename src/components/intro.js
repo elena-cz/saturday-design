@@ -7,7 +7,7 @@ import Title from './title';
 import ContactIcons from './contactIcons';
 
 const Intro = () => (
-  <section>
+  <section className={styles.section}>
     <Title text="title" htag="h1" />
     <Title text="projects" htag="h2" />
 

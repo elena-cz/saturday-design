@@ -1,3 +1,15 @@
 $indigo: #1a237e;
 $pink: #ffebee;
 $yellow: #ffeb3b;
+
+$breakpoints: (
+  'small': (
+    max-width: 767px,
+  ),
+  'medium': (
+    max-width: 1023px,
+  ),
+  'large': (
+    max-width: 1215px,
+  ),
+) !default;
