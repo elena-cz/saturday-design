@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-// import '../styles/bulma.scss';
 
 import Layout from '../components/layout';
 import Intro from '../components/intro';

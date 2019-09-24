@@ -63,13 +63,13 @@ $base-font-size: 16px;
 
 // Paragraph Styles
 $paragraph-color: $indigo;
-$paragraph-size: rem(17px);
+$paragraph-size: rem(20px);
 $paragraph-line-height: 1.5em;
 $paragraph-margin: 20px;
 
 // Header Styles
 $header-color: $indigo;
-$header-size: rem(60px);
+$header-size: rem(72px);
 $header-line-height: 1.25em;
 $header-margin: $paragraph-margin * 1.2;
 
@@ -80,7 +80,7 @@ $blockquote-line-height: 1.5em;
 $blockquote-margin: $paragraph-margin * 1.5;
 
 // Links
-$link-color: #459bd9;
+$link-color: $indigo;
 
 // hr
 $hr-margin: 30px;
@@ -99,6 +99,7 @@ html,
 body {
   font-size: $base-font-size;
   font-family: $font-family;
+  color: $paragraph-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
@@ -131,7 +132,7 @@ h1 {
 
 h2 {
   font-family: $font-family-bold;
-  font-size: $header-size / 1.2;
+  font-size: $header-size / 1.3;
   font-weight: normal;
   margin-bottom: $header-margin / 1.2;
 }
@@ -337,10 +338,29 @@ img {
 
 .h1-underline {
   height: $header-size / 4;
-  margin-top: -($header-margin * 1.8);
+  margin-top: -($header-margin * 1.95);
 }
 
 .h2-underline {
-  height: ($header-size / 1.2) / 4;
-  margin-top: -(($header-margin * 1.75) / 1.2);
+  height: ($header-size / 1.3) / 4;
+  margin-top: -(($header-margin * 1.85) / 1.2);
+}
+
+.link-button {
+  display: inline-block;
+  box-sizing: content-box;
+  padding: 0.4em;
+  margin: $paragraph-margin 0;
+  text-decoration: none;
+  border: 2px solid $pink;
+  background: linear-gradient(to bottom, $pink 0%, $pink 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 0px;
+  transition: background-size ease-in-out 0.2s;
+
+  &:hover {
+    color: $link-color;
+    background-size: 4px 100%;
+  }
 }
