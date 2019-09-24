@@ -3,7 +3,12 @@ import styles from './contactIcons.module.scss';
 
 const ContactIcons = () => (
   <div className={styles.iconContainer}>
-    <a className={`link-button ${styles.iconButton}`} href="#">
+    <a
+      className={`link-button ${styles.iconButton}`}
+      href="https://www.linkedin.com/in/elenaczubiak"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <svg
         viewBox="0 0 24 24"
         fill="none"
@@ -18,7 +23,12 @@ const ContactIcons = () => (
         <circle cx={4} cy={4} r={2} />
       </svg>
     </a>
-    <a className={`link-button ${styles.iconButton}`} href="#">
+    <a
+      className={`link-button ${styles.iconButton}`}
+      href="https://github.com/elena-cz"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <svg
         viewBox="0 0 24 24"
         fill="none"
@@ -32,7 +42,12 @@ const ContactIcons = () => (
       </svg>
     </a>
 
-    <a className={`link-button ${styles.iconButton}`} href="#">
+    <a
+      className={`link-button ${styles.iconButton}`}
+      href="mailto:elena@saturdaydesign.dev"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <svg
         viewBox="0 0 24 24"
         fill="none"

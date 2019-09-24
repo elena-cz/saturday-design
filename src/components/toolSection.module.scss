@@ -1,7 +1,7 @@
 @import '../styles/mixins.scss';
 
 .section {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .container {
@@ -39,6 +39,9 @@
 }
 
 @include respond-to('small') {
+  .container {
+    justify-content: flex-start;
+  }
   .tool {
     width: 75px;
     margin: 6px;

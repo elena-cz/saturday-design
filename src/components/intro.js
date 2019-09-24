@@ -30,13 +30,13 @@ const Intro = () => {
         />
       </div>
       <div>
-        <h4>
+        <h5>
           people-focused <strong>developer & designer</strong>
-        </h4>
+        </h5>
         <p className="hero-p thin-font">
-          I create amazing web experiences that are thoughtfully designed for
-          everyone involved - from intuitive interfaces for users, easy-to-read
-          code for teammates, and focused objectives for business managers.
+          I create web experiences that are thoughtfully designed for everyone
+          involved&mdash;from intuitive interfaces for users, easy-to-read code
+          for teammates, and focused objectives for business managers.
         </p>
 
         <ContactIcons />
