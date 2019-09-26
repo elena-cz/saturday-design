@@ -1,5 +1,5 @@
 ---
-path: mindysimagination
+path: /projects/mindysimagination
 date: 2019-09-26T19:33:39.135Z
 title: Mindy's Imagination
 url: 'https://mindysimagination.com/'
