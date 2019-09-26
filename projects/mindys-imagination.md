@@ -6,6 +6,4 @@ url: 'https://mindysimagination.com/'
 ---
 abcdefghijklmnopqrstuvwxyz
 
-
-
 ![Homepage Screenshot](/assets/homepagesample-9-19.png)
