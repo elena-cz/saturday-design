@@ -7,13 +7,13 @@ url: 'https://mindysimagination.com/'
 
 # heading
 
-paragraph
+paragraph {.test-class}
 
 paragraph
 
-[link](https://mindysimagination.com/)
+[link](https://mindysimagination.com/){:target="_blank" rel="noopener"}
 
 - bullet 1
 - bullet 2
 
-![Homepage Screenshot](/assets/homepagesample-9-19.png)
+![Homepage Screenshot](/assets/homepagesample-9-19.png){.test-image-class}
