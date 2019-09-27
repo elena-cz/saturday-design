@@ -50,6 +50,21 @@ module.exports = {
               maxWidth: 960,
             },
           },
+          'gatsby-remark-attr',
+          {
+            resolve: 'gatsby-remark-custom-blocks',
+            options: {
+              blocks: {
+                danger: {
+                  classes: 'danger',
+                },
+                info: {
+                  classes: 'info',
+                  title: 'optional',
+                },
+              },
+            },
+          },
         ],
       },
     },
