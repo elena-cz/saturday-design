@@ -1,25 +1,43 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
+import { CSSTransition } from 'react-transition-group';
+import { Link } from 'gatsby';
 import styles from './header.module.scss';
 
-// import Nav from './nav';
+import Nav from './nav';
 import Logo from './logo';
+import Title from './title';
 
-const Header = ({ siteTitle }) => (
-  <header className={styles.header}>
+const Header = ({ page, title }) => (
+  <header className={`${styles.header} ${page === 'home' ? styles.home : ''}`}>
+    <Nav page={page} />
     <div className={styles.logoContainer}>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
     </div>
+    <CSSTransition
+      in={title}
+      timeout={350}
+      classNames="fade-in"
+      unmountOnExit
+      appear
+    >
+      {/* {title && ( */}
+      <Title text={title} htag="h2" center className={styles.title} />
+      {/* )} */}
+    </CSSTransition>
   </header>
 );
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  page: PropTypes.string,
+  title: PropTypes.string,
 };
 
 Header.defaultProps = {
-  siteTitle: ``,
+  page: 'home',
+  title: '',
 };
 
 export default Header;

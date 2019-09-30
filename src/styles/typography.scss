@@ -362,8 +362,18 @@ b,
   background-size: 4px 0px;
   transition: background-size ease-in-out 0.2s;
 
+  &.no-border-button {
+    border: 2px solid white;
+  }
+
+  &.filled-button {
+    background-color: $pink;
+    border: 2px solid $pink;
+  }
+
   &:hover {
     color: $link-color;
     background-size: 4px 100%;
+    border: 2px solid $pink;
   }
 }
