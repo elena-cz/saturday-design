@@ -38,6 +38,7 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-layout`,
     `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-transformer-remark`,

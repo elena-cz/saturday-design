@@ -40,7 +40,28 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     createPage({
       path: node.frontmatter.path,
       component: projectTemplate,
-      context: {}, // additional data can be passed via context
+      context: { name: 'projects', title: 'projects' }, // additional data can be passed via context
     });
   });
+};
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage } = actions;
+
+  let name = 'home';
+  let title = '';
+
+  if (page.path.includes('about')) {
+    name = 'about';
+    title = 'about';
+  }
+
+  if (page.path.includes('projects')) {
+    name = 'projects';
+    title = 'projects';
+  }
+
+  page.context.name = name;
+  page.context.title = title;
+  createPage(page);
 };

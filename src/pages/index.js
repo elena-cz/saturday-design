@@ -3,13 +3,13 @@ import { Link } from 'gatsby';
 
 import Image from '../components/image';
 import SEO from '../components/seo';
-import Layout from '../components/layout';
+// import Layout from '../layouts';
 import Intro from '../components/intro';
 import ToolSection from '../components/toolSection';
 import ProjectSection from '../components/projectSection';
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
     <Intro />
     <ToolSection />
@@ -21,7 +21,7 @@ const IndexPage = () => (
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link> */}
-  </Layout>
+  </>
 );
 
 export default IndexPage;

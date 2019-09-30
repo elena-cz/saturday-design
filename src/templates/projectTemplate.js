@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import SEO from '../components/seo';
-import Layout from '../components/layout';
+// import Layout from '../layouts';
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -10,7 +10,7 @@ export default function Template({
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
   return (
-    <Layout>
+    <>
       <SEO title="{frontmatter.title}" />
       <div className="project-post-container">
         <div className="project-post">
@@ -22,7 +22,7 @@ export default function Template({
           />
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
 
