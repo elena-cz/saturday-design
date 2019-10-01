@@ -20,5 +20,34 @@
 .fade-in-enter-active,
 .fade-in-appear-active {
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 0.5s 1s;
+}
+
+.flip-enter,
+.flip-appear {
+  // opacity: 0;
+  transform-origin: bottom;
+  transform: rotateX(180deg);
+}
+.flip-enter-active,
+.flip-appear-active {
+  transform-origin: bottom;
+  // opacity: 1;
+  transform: rotateX(0);
+  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.flip-delay-enter,
+.flip-delay-appear {
+  opacity: 0;
+  transform-origin: bottom;
+  transform: rotateX(180deg);
+}
+.flip-delay-enter-active,
+.flip-delay-appear-active {
+  transform-origin: bottom;
+  opacity: 1;
+  transform: rotateX(0);
+  transition: opacity 0.25s 0.5s,
+    transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s;
 }

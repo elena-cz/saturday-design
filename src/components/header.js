@@ -11,21 +11,27 @@ import Title from './title';
 const Header = ({ page, title }) => (
   <header className={`${styles.header} ${page === 'home' ? styles.home : ''}`}>
     <Nav page={page} />
+    {/* <CSSTransition
+      in={true}
+      timeout={2000}
+      classNames="flip"
+      unmountOnExit
+      appear
+    > */}
     <div className={styles.logoContainer}>
       <Link to="/">
         <Logo />
       </Link>
     </div>
+    {/* </CSSTransition> */}
     <CSSTransition
-      in={title}
-      timeout={350}
-      classNames="fade-in"
+      in={!!title}
+      timeout={2000}
+      classNames="flip-delay"
       unmountOnExit
       appear
     >
-      {/* {title && ( */}
       <Title text={title} htag="h2" center className={styles.title} />
-      {/* )} */}
     </CSSTransition>
   </header>
 );
