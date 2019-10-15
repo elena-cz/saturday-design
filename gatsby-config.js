@@ -56,8 +56,11 @@ module.exports = {
             resolve: 'gatsby-remark-custom-blocks',
             options: {
               blocks: {
-                danger: {
-                  classes: 'danger',
+                imageOutline: {
+                  classes: 'imageOutline',
+                },
+                image: {
+                  classes: 'image',
                 },
                 info: {
                   classes: 'info',

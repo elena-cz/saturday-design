@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import './reset.scss';
+@import './mixins.scss';
 @import './typography.scss';
 
 // If need, change your variables before importing Bulma
@@ -12,6 +14,8 @@
   height: 100%;
   width: auto;
 }
+
+// TRANSITIONS
 
 .fade-in-enter,
 .fade-in-appear {
@@ -50,4 +54,28 @@
   transform: rotateX(0);
   transition: opacity 0.25s 0.5s,
     transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s;
+}
+
+// PROJECT PAGE STYLES
+
+.project {
+  .hero-p {
+    margin-top: 0.6rem;
+  }
+
+  .project-content {
+    margin-top: 1.5rem;
+
+    // .gatsby-resp-image-wrapper {
+    // }
+
+    .image,
+    .imageOutline {
+      margin-top: 2.5rem;
+      box-sizing: border-box;
+    }
+    .imageOutline {
+      border: 1px solid $border-color;
+    }
+  }
 }

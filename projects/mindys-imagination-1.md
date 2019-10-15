@@ -18,7 +18,7 @@ backend: >-
   processing
 ---
 
-### key features
+###### key features
 
 - Responsive design for mobile, desktop, and everything in between
 - Installable on iOS, Android, and more
@@ -28,14 +28,17 @@ backend: >-
 - Easy-to-use admin pages for managing content (not user-visible, but some of my favorite pages!)
 - Simple, relaxing, & whimsical app design to match content and help get our users into the right mental state for meditation
 
-![Homepage Screenshot](/assets/homepagesample-9-19.png)
+[[image]]
+| ![App Screenshots](/assets/appexamplescreensindevices.png 'App Screenshots')
 
-Homepage
+> App Screenshots
 
-![App Screenshots](/assets/appexamplescreensindevices.png 'App Screenshots')
+[[imageOutline]]
+| ![Homepage Screenshot](/assets/homepagesample-9-19.png)
 
-App Screenshots
+> Homepage
 
-![Admin page screenshot](/assets/screen-shot-2019-09-13-at-2.23.24-pm.png 'Admin Page')
+[[imageOutline]]
+| ![Admin page screenshot](/assets/screen-shot-2019-09-13-at-2.23.24-pm.png 'Admin Page')
 
-Admin Page
+> Admin Page

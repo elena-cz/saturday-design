@@ -1,0 +1,14 @@
+.titleContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  h4 {
+    margin-bottom: 20px;
+  }
+}
+
+.urlButton {
+  margin-top: 0;
+}
