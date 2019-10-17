@@ -24,4 +24,4 @@ In the end, it wasn’t really a hard decision. Programming lets me use my imagi
 
 ##### contact
 
-Feel free to reach out about freelance, collaboration, and career opportunities or just to chat
+Feel free to reach out about freelance, collaboration, and career opportunities, or just to chat
