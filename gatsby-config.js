@@ -20,6 +20,13 @@ module.exports = {
         path: `${__dirname}/projects`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -40,6 +47,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-layout`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-remark-collection`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
