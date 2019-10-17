@@ -7,7 +7,7 @@ title: About
 
 1. Your spreadsheets are your creative outlet, and the highlight of your day is getting a particularly fancy formula to work
 2. You manage to make it your job to work with engineers to improve your team’s primary tool, instead of just using it like everyone else
-3. You read about why so [many women choose not to study computer science](https://www.nytimes.com/2019/02/13/magazine/women-coding-computer-programming.html){target="_blank" rel="noopener noreferrer"} and think “Damn, that’s me”
+3. You read about why so [many women choose not to study computer science](https://www.nytimes.com/2019/02/13/magazine/women-coding-computer-programming.html){target="_blank" rel="noopener noreferrer"} and think “_Damn_, that’s me”
 4. You remember that in high school you loved math, won a web design award, and continued to make websites in college
 5. You spend the year learning to code and take a sabbatical to do Hack Reactor’s Software Engineering Immersive program where you learn “I’m good at this…”
 
