@@ -3,7 +3,7 @@ path: /about
 date: 2019-10-17T18:14:41.270Z
 title: About
 ---
-##### 5 signs you should quit your job & become a developer
+###### 5 signs you should quit your job & become a developer
 
 1. Your spreadsheets are your creative outlet, and the highlight of your day is getting a particularly fancy formula to work
 2. You manage to make it your job to work with engineers to improve your team’s primary tool, instead of just using it like everyone else
