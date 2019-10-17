@@ -20,7 +20,7 @@ collections:
       - { name: frontend, label: Frontend, required: false }
       - { name: backend, label: Backend, required: false }
       - { name: body, label: Body, widget: markdown, required: false }
-- name: content
+  - name: content
     label: content
     folder: content
     create: true
