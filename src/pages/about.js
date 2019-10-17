@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 import styles from './about.module.scss';
 import SEO from '../components/seo';
-import Title from '../components/title';
+import ContactIcons from '../components/contactIcons';
 
 const AboutPage = ({ data }) => {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
@@ -17,6 +17,7 @@ const AboutPage = ({ data }) => {
         className="styled-lists"
         dangerouslySetInnerHTML={{ __html: html }}
       />
+      <ContactIcons expanded />
     </div>
   );
 };
