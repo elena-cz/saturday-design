@@ -17,7 +17,7 @@ backend: >-
   Firebase (Firestore, Cloud Functions, Auth, Storage), Stripe payment
   processing
 ---
-### Akey features
+###### key features
 
 * Responsive design for mobile, desktop, and everything in between
 * Installable on iOS, Android, and more
