@@ -14,4 +14,6 @@
 
 .footer {
   grid-area: footer;
+  display: flex;
+  justify-content: flex-end;
 }

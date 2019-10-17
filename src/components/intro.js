@@ -37,7 +37,7 @@ const Intro = () => {
           people-focused <strong>developer & designer</strong>
         </h4>
         <div
-          className="hero-p thin-font"
+          className={styles.text}
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         />
         <ContactIcons />
