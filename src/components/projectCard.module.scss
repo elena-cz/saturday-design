@@ -1,0 +1,54 @@
+@import '../styles/mixins.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 1rem);
+  box-sizing: border-box;
+  margin: 1rem 0;
+
+  &.featured {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.image {
+  width: 100%;
+
+  .featured & {
+    width: 60%;
+    min-width: 60%;
+  }
+}
+
+.text {
+  margin-top: 1rem;
+
+  .featured & {
+    width: 40%;
+    min-width: 40%;
+    padding-left: 1.5rem;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.linkButton {
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+@include respond-to('small') {
+  .image {
+    width: 100%;
+  }
+
+  .text {
+    width: 100%;
+    padding-left: 0;
+  }
+}
