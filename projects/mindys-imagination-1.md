@@ -1,7 +1,9 @@
 ---
 path: /projects/mindys-imagination
+order: 0
 date: 2019-10-01T19:33:39.135Z
 title: Mindy's Imagination
+thumbnail: /assets/appexamplescreensindevices.png
 urlText: mindysimagination.com
 url: 'https://mindysimagination.com/'
 description: >-
