@@ -11,8 +11,10 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
+      - { name: order, label: Order, widget: number }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - { name: thumbnail, label: Thumbnail, widget: image }
       - { name: urlText, label: URLText, required: false }
       - { name: url, label: URL, required: false }
       - { name: description, label: Description, required: false }
