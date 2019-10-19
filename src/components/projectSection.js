@@ -9,32 +9,59 @@ const ProjectSection = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        imagination: file(
-          relativePath: { eq: "ImaginationDeviceScreens.png" }
+        allMarkdownRemark(
+          filter: { fields: { collection: { eq: "projects" } } }
+          sort: { fields: frontmatter___order }
         ) {
-          childImageSharp {
-            fluid(maxWidth: 500, quality: 90) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        mastermind: file(relativePath: { eq: "MastermindScreenshot.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 250, quality: 90) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        auction: file(relativePath: { eq: "AuctionKingScreenshot.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 250, quality: 90) {
-              ...GatsbyImageSharpFluid
+          edges {
+            node {
+              frontmatter {
+                path
+                title
+                url
+                urlText
+                thumbnail
+                description
+                order
+              }
             }
           }
         }
       }
     `
   );
+
+  const { edges } = data.allMarkdownRemark;
+  const projects = edges.map(project => project.node.frontmatter);
+  const thumbnails = projects.map(project => project.thumbnail.split('/')[1]);
+
+  // const imageData = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       markdownRemark(frontmatter: { path: { eq: "/about" } }) {
+  //         frontmatter {
+  //           path
+  //         }
+  //       }
+  //     }
+  //   `
+  // );
+
+  // const imageData = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       thumbnail: file(
+  //         relativePath: { eq: "appexamplescreensindevices.png" }
+  //       ) {
+  //         childImageSharp {
+  //           fluid(maxWidth: 250, quality: 90) {
+  //             ...GatsbyImageSharpFluid
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `
+  // );
 
   return (
     <section
@@ -47,9 +74,13 @@ const ProjectSection = () => {
         marginBottom: '4rem',
       }}
     >
-      <ProjectCard featured image={data.imagination.childImageSharp.fluid} />
-      <ProjectCard image={data.imagination.childImageSharp.fluid} />
-      <ProjectCard image={data.imagination.childImageSharp.fluid} />
+      <div>{JSON.stringify(projects)}</div>
+      {projects.map((project, index) => (
+        <ProjectCard featured={index === 0} />
+      ))}
+
+      {/* <ProjectCard image={data.imagination.childImageSharp.fluid} /> */}
+      {/* <ProjectCard image={data.imagination.childImageSharp.fluid} /> */}
     </section>
   );
 };
