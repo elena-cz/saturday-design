@@ -27,41 +27,27 @@ const ProjectSection = () => {
             }
           }
         }
+        images: allFile(filter: { relativePath: { regex: "/thumbnail/" } }) {
+          edges {
+            node {
+              relativePath
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 90) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
       }
     `
   );
 
-  const { edges } = data.allMarkdownRemark;
-  const projects = edges.map(project => project.node.frontmatter);
-  const thumbnails = projects.map(project => project.thumbnail.split('/')[1]);
-
-  // const imageData = useStaticQuery(
-  //   graphql`
-  //     query {
-  //       markdownRemark(frontmatter: { path: { eq: "/about" } }) {
-  //         frontmatter {
-  //           path
-  //         }
-  //       }
-  //     }
-  //   `
-  // );
-
-  // const imageData = useStaticQuery(
-  //   graphql`
-  //     query {
-  //       thumbnail: file(
-  //         relativePath: { eq: "appexamplescreensindevices.png" }
-  //       ) {
-  //         childImageSharp {
-  //           fluid(maxWidth: 250, quality: 90) {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `
-  // );
+  const { allMarkdownRemark, images } = data;
+  const projects = allMarkdownRemark.edges.map(
+    project => project.node.frontmatter
+  );
+  // const thumbnails = projects.map(project => project.thumbnail.split('/')[1]);
 
   return (
     <section
@@ -75,6 +61,7 @@ const ProjectSection = () => {
       }}
     >
       <div>{JSON.stringify(projects)}</div>
+      <div>{JSON.stringify(images.edges)}</div>
       {projects.map((project, index) => (
         <ProjectCard featured={index === 0} />
       ))}

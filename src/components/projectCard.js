@@ -1,25 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import styles from './projectCard.module.scss';
 
 const ProjectCard = ({ featured, thumbnail }) => {
   // const imagePath = thumbnail.split('/')[0];
-
-  // const data = useStaticQuery(
-  //   graphql`
-  //     query($imagePath: String!) {
-  //       image: file(relativePath: { eq: $imagePath }) {
-  //         childImageSharp {
-  //           fluid(maxWidth: 600, quality: 90) {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `
-  // );
 
   return (
     <div
