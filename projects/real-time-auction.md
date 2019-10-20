@@ -12,6 +12,12 @@ role: Developer
 frontend: 'Vue, Vuex, Pusher.js, Bootstrap'
 backend: Laravel
 ---
-![](/assets/auctionkingscreenshot.png)
+[[imageOutline]]
+|![User Interface](/assets/auctionkingscreenshot.png)
 
-![](/assets/auctionking-redacted.png)
+> User Interface
+
+[[imageOutline]]
+|![Admin Console](/assets/auctionking-redacted.png)
+
+> Admin Console
