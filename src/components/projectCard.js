@@ -1,49 +1,63 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Img from 'gatsby-image';
+import { Link } from 'gatsby';
 import styles from './projectCard.module.scss';
 
-const ProjectCard = ({ featured, thumbnail }) => {
-  // const imagePath = thumbnail.split('/')[0];
-
+const ProjectCard = ({
+  featured,
+  path,
+  thumbnail,
+  title,
+  urlText,
+  url,
+  description,
+}) => {
   return (
     <div
       className={`${styles.container} ${featured ? styles.featured : ''} card`}
     >
+      <Link to={path}>{path}</Link>
       <Img
         fluid={thumbnail}
         alt="Mindy's Imagination Thumbnail"
         className={styles.image}
       />
       <div className={styles.text}>
-        <h5>Mindy&rsquo;s Imagination</h5>
-        <a
-          href="https://mindysimagination.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`link-button ${styles.linkButton}`}
-        >
-          mindysimagination.com
-        </a>
+        <h5>{title}</h5>
+        {url && (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`link-button ${styles.linkButton}`}
+          >
+            {urlText}
+          </a>
+        )}
 
-        <p>
-          I co-founded Mindy&rsquo;s Imagination and designed and built an app
-          to showcase our unique and accessible meditation technique. It&rsquo;s
-          a fully functional PWA (Progressive Web App) that works on nearly
-          every device, with offline access to all content.
-        </p>
+        <p>{description}</p>
       </div>
     </div>
   );
 };
 
 ProjectCard.propTypes = {
-  thumbnail: PropTypes.string.isRequired,
   featured: PropTypes.bool,
+  path: PropTypes.string.isRequired,
+  thumbnail: PropTypes.object.isRequired,
+  title: PropTypes.string,
+  urlText: PropTypes.string,
+  url: PropTypes.string,
+  description: PropTypes.string,
 };
 
 ProjectCard.defaultProps = {
   featured: false,
+  title: '',
+  urlText: '',
+  url: '',
+  description: '',
 };
 
 export default ProjectCard;

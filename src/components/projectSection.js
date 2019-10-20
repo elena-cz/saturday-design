@@ -45,15 +45,15 @@ const ProjectSection = () => {
 
   const { allMarkdownRemark, images } = data;
   const projects = allMarkdownRemark.edges.map(project => {
-    const data = project.node.frontmatter;
-    data.thumbnail = data.thumbnail.slice(8, -4);
-    return data;
+    const { frontmatter } = project.node;
+    frontmatter.thumbnail = frontmatter.thumbnail.slice(8, -4);
+    return frontmatter;
   });
   const thumbnails = {};
   images.edges.forEach(image => {
-    const data = image.node;
-    const name = data.relativePath.slice(0, -4);
-    thumbnails[name] = data.childImageSharp.fluid;
+    const { node } = image;
+    const name = node.relativePath.slice(0, -4);
+    thumbnails[name] = node.childImageSharp.fluid;
   });
 
   return (
@@ -67,17 +67,18 @@ const ProjectSection = () => {
         marginBottom: '4rem',
       }}
     >
-      <div>{JSON.stringify(projects)}</div>
-      <div>{JSON.stringify(thumbnails)}</div>
       {projects.map((project, index) => (
         <ProjectCard
           featured={index === 0}
+          path={project.path}
           thumbnail={thumbnails[project.thumbnail]}
+          title={project.title}
+          urlText={project.urlText}
+          url={project.url}
+          description={project.description}
+          key={project.path}
         />
       ))}
-
-      {/* <ProjectCard image={data.imagination.childImageSharp.fluid} /> */}
-      {/* <ProjectCard image={data.imagination.childImageSharp.fluid} /> */}
     </section>
   );
 };
