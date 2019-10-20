@@ -44,10 +44,17 @@ const ProjectSection = () => {
   );
 
   const { allMarkdownRemark, images } = data;
-  const projects = allMarkdownRemark.edges.map(
-    project => project.node.frontmatter
-  );
-  // const thumbnails = projects.map(project => project.thumbnail.split('/')[1]);
+  const projects = allMarkdownRemark.edges.map(project => {
+    const data = project.node.frontmatter;
+    data.thumbnail = data.thumbnail.slice(8, -4);
+    return data;
+  });
+  const thumbnails = {};
+  images.edges.forEach(image => {
+    const data = image.node;
+    const name = data.relativePath.slice(0, -4);
+    thumbnails[name] = data.childImageSharp.fluid;
+  });
 
   return (
     <section
@@ -61,9 +68,12 @@ const ProjectSection = () => {
       }}
     >
       <div>{JSON.stringify(projects)}</div>
-      <div>{JSON.stringify(images.edges)}</div>
+      <div>{JSON.stringify(thumbnails)}</div>
       {projects.map((project, index) => (
-        <ProjectCard featured={index === 0} />
+        <ProjectCard
+          featured={index === 0}
+          thumbnail={thumbnails[project.thumbnail]}
+        />
       ))}
 
       {/* <ProjectCard image={data.imagination.childImageSharp.fluid} /> */}

@@ -10,11 +10,11 @@ const ProjectCard = ({ featured, thumbnail }) => {
     <div
       className={`${styles.container} ${featured ? styles.featured : ''} card`}
     >
-      {/* <Img
-        fluid={data.image.childImageSharp.fluid}
+      <Img
+        fluid={thumbnail}
         alt="Mindy's Imagination Thumbnail"
         className={styles.image}
-      /> */}
+      />
       <div className={styles.text}>
         <h5>Mindy&rsquo;s Imagination</h5>
         <a
