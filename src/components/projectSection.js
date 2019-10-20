@@ -46,7 +46,7 @@ const ProjectSection = () => {
   const { allMarkdownRemark, images } = data;
   const projects = allMarkdownRemark.edges.map(project => {
     const { frontmatter } = project.node;
-    frontmatter.thumbnail = frontmatter.thumbnail.slice(8, -4);
+    frontmatter.thumbnailName = frontmatter.thumbnail.slice(8, -4);
     return frontmatter;
   });
   const thumbnails = {};
@@ -71,7 +71,7 @@ const ProjectSection = () => {
         <ProjectCard
           featured={index === 0}
           path={project.path}
-          thumbnail={thumbnails[project.thumbnail]}
+          thumbnail={thumbnails[project.thumbnailName]}
           title={project.title}
           urlText={project.urlText}
           url={project.url}

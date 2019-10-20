@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { navigate } from 'gatsby';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 import styles from './projectCard.module.scss';
@@ -15,9 +16,18 @@ const ProjectCard = ({
 }) => {
   return (
     <div
+      onClick={e => {
+        e.preventDefault();
+        navigate(path);
+      }}
+      onKeyPress={e => {
+        e.preventDefault();
+        navigate(path);
+      }}
       className={`${styles.container} ${featured ? styles.featured : ''} card`}
+      role="button"
+      tabIndex="0"
     >
-      <Link to={path}>{path}</Link>
       <Img
         fluid={thumbnail}
         alt="Mindy's Imagination Thumbnail"
