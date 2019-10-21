@@ -17,11 +17,9 @@ const ProjectCard = ({
   return (
     <div
       onClick={e => {
-        e.preventDefault();
         navigate(path);
       }}
       onKeyPress={e => {
-        e.preventDefault();
         navigate(path);
       }}
       className={`${styles.container} ${featured ? styles.featured : ''} card`}

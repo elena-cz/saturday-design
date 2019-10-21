@@ -14,7 +14,7 @@ export default function Template({
       <SEO title={frontmatter.title} />
       <div className="project">
         <div className={styles.titleContainer}>
-          <h4>{frontmatter.title}</h4>
+          <h5>{frontmatter.title}</h5>
           {frontmatter.url && (
             <a
               href={frontmatter.url}
