@@ -27,7 +27,7 @@
 }
 
 .text {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 
   .featured & {
     width: 40%;
@@ -41,16 +41,29 @@
 
 .linkButton {
   font-size: 1.1rem;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
   margin-top: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @include respond-to('small') {
-  .image {
+  .container {
     width: 100%;
+  }
+  .image {
+    .featured & {
+      width: 100%;
+    }
   }
 
   .text {
-    width: 100%;
-    padding-left: 0;
+    .featured & {
+      width: 100%;
+      margin-top: 1.5rem;
+      padding-left: 0;
+    }
   }
 }
