@@ -10,7 +10,21 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/projects`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -24,13 +38,49 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/SaturdayDesignIcon.png`, // This path is relative to the root of the site.
+        icon: `static/assets/SaturdayDesignIcon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-layout`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-remark-collection`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          'gatsby-remark-relative-images',
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              backgroundColor: 'transparent',
+              disableBgImageOnAlpha: true,
+            },
+          },
+          'gatsby-remark-attr',
+          {
+            resolve: 'gatsby-remark-custom-blocks',
+            options: {
+              blocks: {
+                imageOutline: {
+                  classes: 'imageOutline',
+                },
+                image: {
+                  classes: 'image',
+                },
+                info: {
+                  classes: 'info',
+                  title: 'optional',
+                },
+              },
+            },
+          },
+        ],
+      },
+    },
   ],
 };

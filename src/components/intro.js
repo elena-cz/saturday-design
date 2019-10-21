@@ -16,6 +16,9 @@ const Intro = () => {
             }
           }
         }
+        markdownRemark(frontmatter: { path: { eq: "/home-bio" } }) {
+          html
+        }
       }
     `
   );
@@ -33,12 +36,10 @@ const Intro = () => {
         <h4>
           people-focused <strong>developer & designer</strong>
         </h4>
-        <p className="hero-p thin-font">
-          I create web experiences that are thoughtfully designed for everyone
-          involved&mdash;from intuitive interfaces for users, easy-to-read code
-          for teammates, and focused objectives for business managers.
-        </p>
-
+        <div
+          className={styles.text}
+          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+        />
         <ContactIcons />
       </div>
     </section>

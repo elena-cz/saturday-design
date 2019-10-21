@@ -1,34 +1,41 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import styles from './projectSection.module.scss';
+import styles from './projectCard.module.scss';
 
-import Title from './title';
+import ProjectCard from './projectCard';
 
 const ProjectSection = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        imagination: file(
-          relativePath: { eq: "ImaginationDeviceScreens.png" }
+        allMarkdownRemark(
+          filter: { fields: { collection: { eq: "projects" } } }
+          sort: { fields: frontmatter___order }
         ) {
-          childImageSharp {
-            fluid(maxWidth: 500, quality: 90) {
-              ...GatsbyImageSharpFluid
+          edges {
+            node {
+              frontmatter {
+                path
+                title
+                url
+                urlText
+                thumbnail
+                description
+                order
+              }
             }
           }
         }
-        mastermind: file(relativePath: { eq: "MastermindScreenshot.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 250, quality: 90) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        auction: file(relativePath: { eq: "AuctionKingScreenshot.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 250, quality: 90) {
-              ...GatsbyImageSharpFluid
+        images: allFile(filter: { relativePath: { regex: "/thumbnail/" } }) {
+          edges {
+            node {
+              relativePath
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 90) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
@@ -36,35 +43,42 @@ const ProjectSection = () => {
     `
   );
 
+  const { allMarkdownRemark, images } = data;
+  const projects = allMarkdownRemark.edges.map(project => {
+    const { frontmatter } = project.node;
+    frontmatter.thumbnailName = frontmatter.thumbnail.slice(8, -4);
+    return frontmatter;
+  });
+  const thumbnails = {};
+  images.edges.forEach(image => {
+    const { node } = image;
+    const name = node.relativePath.slice(0, -4);
+    thumbnails[name] = node.childImageSharp.fluid;
+  });
+
   return (
-    <section className={styles.section}>
-      <Title text="projects" htag="h2" />
-
-      <div className={styles.featuredContainer}>
-        <Img
-          fluid={data.imagination.childImageSharp.fluid}
-          alt="Mindy's Imagination Thumbnail"
-          className={styles.featuredImage}
+    <section
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+        alignItems: 'stretch',
+        marginTop: '1.5rem',
+        marginBottom: '4rem',
+      }}
+    >
+      {projects.map((project, index) => (
+        <ProjectCard
+          featured={index === 0}
+          path={project.path}
+          thumbnail={thumbnails[project.thumbnailName]}
+          title={project.title}
+          urlText={project.urlText}
+          url={project.url}
+          description={project.description}
+          key={project.path}
         />
-        <div className={styles.featuredText}>
-          <h5>Mindy&rsquo;s Imagination</h5>
-          <a
-            href="https://mindysimagination.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`link-button ${styles.linkButton}`}
-          >
-            mindysimagination.com
-          </a>
-
-          <p>
-            I co-founded Mindy&rsquo;s Imagination and designed and built an app
-            to showcase our unique and accessible meditation technique.
-            It&rsquo;s a fully functional PWA (Progressive Web App) that works
-            on nearly every device, with offline access to all content.
-          </p>
-        </div>
-      </div>
+      ))}
     </section>
   );
 };

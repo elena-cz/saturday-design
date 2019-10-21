@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import './reset.scss';
+@import './mixins.scss';
 @import './typography.scss';
 
 // If need, change your variables before importing Bulma
@@ -8,7 +10,97 @@
 
 // @import '~bulma/bulma.sass';
 
+div:focus,
+div:active {
+  outline-color: $pink;
+}
+
+// .image,
+// .imageOutline {
+//   max-width: 960px;
+//   width: auto;
+//   max-height: 1000px;
+//   height: auto;
+// }
+
+img {
+  width: 100%;
+  max-width: 960px;
+}
+
 .svg {
   height: 100%;
   width: auto;
+}
+
+// TRANSITIONS
+
+.fade-in-enter,
+.fade-in-appear {
+  opacity: 0;
+}
+.fade-in-enter-active,
+.fade-in-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s 1s;
+}
+
+.flip-enter,
+.flip-appear {
+  // opacity: 0;
+  transform-origin: bottom;
+  transform: rotateX(180deg);
+}
+.flip-enter-active,
+.flip-appear-active {
+  transform-origin: bottom;
+  // opacity: 1;
+  transform: rotateX(0);
+  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.flip-delay-enter,
+.flip-delay-appear {
+  opacity: 0;
+  transform-origin: bottom;
+  transform: rotateX(180deg);
+}
+.flip-delay-enter-active,
+.flip-delay-appear-active {
+  transform-origin: bottom;
+  opacity: 1;
+  transform: rotateX(0);
+  transition: opacity 0.25s 0.5s,
+    transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s;
+}
+
+// CARD
+
+.card {
+  padding: 1rem;
+  box-shadow: $drop-shadow;
+}
+
+// PROJECT PAGE STYLES
+
+.project {
+  .hero-p {
+    margin-top: 0.6rem;
+  }
+
+  .project-content {
+    margin-top: 1.5rem;
+
+    // .gatsby-resp-image-wrapper {
+    // }
+
+    .image,
+    .imageOutline {
+      margin-top: 2.5rem;
+      box-sizing: border-box;
+    }
+    .imageOutline {
+      border: 1px solid $border-color;
+    }
+  }
 }
