@@ -10,7 +10,6 @@ const AboutPage = ({ data }) => {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { html } = markdownRemark;
   return (
-    // <Layout page="about" title="about">
     <div className={styles.textContainer}>
       <SEO title="About" />
       <div

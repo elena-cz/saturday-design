@@ -15,21 +15,23 @@ export default function Template({
       <div className="project">
         <div className={styles.titleContainer}>
           <h4>{frontmatter.title}</h4>
-          <a
-            href={frontmatter.url}
-            className={`link-button ${styles.urlButton}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {frontmatter.urlText}
-          </a>
+          {frontmatter.url && (
+            <a
+              href={frontmatter.url}
+              className={`link-button ${styles.urlButton}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {frontmatter.urlText}
+            </a>
+          )}
         </div>
         <p className="hero-p thin-font">{frontmatter.description}</p>
         <h6>role</h6>
         <p>{frontmatter.role}</p>
-        <h6>frontend</h6>
+        {frontmatter.frontend && <h6>frontend</h6>}
         <p>{frontmatter.frontend}</p>
-        <h6>backend</h6>
+        {frontmatter.backend && <h6>backend</h6>}
         <p>{frontmatter.backend}</p>
         <div
           className="project-content"
