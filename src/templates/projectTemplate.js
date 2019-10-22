@@ -36,13 +36,20 @@ export default function Template({
             </a>
           )}
         </div>
+
         <p className="hero-p thin-font">{frontmatter.description}</p>
         <h6>role</h6>
         <p>{frontmatter.role}</p>
-        {frontmatter.frontend && <h6>frontend</h6>}
-        <p>{frontmatter.frontend}</p>
-        {frontmatter.backend && <h6>backend</h6>}
-        <p>{frontmatter.backend}</p>
+        <div className={styles.introContainer}>
+          <div className={styles.introContent}>
+            {frontmatter.frontend && <h6>frontend</h6>}
+            <p>{frontmatter.frontend}</p>
+          </div>
+          <div className={styles.introContent}>
+            {frontmatter.backend && <h6>backend</h6>}
+            <p>{frontmatter.backend}</p>
+          </div>
+        </div>
         <div
           className="project-content"
           dangerouslySetInnerHTML={{ __html: html }}

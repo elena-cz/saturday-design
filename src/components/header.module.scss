@@ -33,6 +33,10 @@
   .logoContainer {
     max-width: 180px;
     margin-left: 0;
-    transform: translate(calc(50vw - 120px), 3.5rem) scale(1.8);
+    transform: translate(calc(50vw - 120px), 3rem) scale(1.8);
+
+    .home & {
+      transform: translate(calc(50vw - 120px), 3rem) scale(1.8);
+    }
   }
 }

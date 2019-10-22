@@ -1,3 +1,5 @@
+@import '../styles/mixins.scss';
+
 .titleContainer {
   display: flex;
   align-items: flex-start;
@@ -12,4 +14,25 @@
 
 .urlButton {
   margin-top: 0;
+}
+
+.introContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  // h6 {
+  //   margin-bottom: 0.3rem;
+  // }
+}
+
+.introContent {
+  min-width: calc(50% - 1rem);
+  width: calc(50% - 1rem);
+}
+
+@include respond-to('small') {
+  .introContent {
+    min-width: 100%;
+    width: 100%;
+  }
 }
