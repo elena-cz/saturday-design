@@ -376,12 +376,12 @@ b,
 
 .h2-underline {
   height: $header-size / 4;
-  margin-top: -($header-margin * 1.95);
+  margin-top: -(($header-margin * 1.85) / 1.2);
 }
 
 .h3-underline {
-  height: ($header-size / 1.3) / 4;
-  margin-top: -(($header-margin * 1.85) / 1.2);
+  height: ($header-size / 1.5) / 4;
+  margin-top: -(($header-margin * 1.95) / 1.5);
 }
 
 .link-button {

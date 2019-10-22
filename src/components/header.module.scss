@@ -21,7 +21,7 @@
   top: 0;
   height: auto;
   width: 300px;
-  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.5s 0.1s;
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
 
   .home & {
     transform-origin: top;
