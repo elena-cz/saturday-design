@@ -17,8 +17,8 @@ frontend: 'React, Styled Components'
 * Custom color picker, responsively sized for device width
 * CSS animations for revealing code and showing winning or lost game banners
 
-[[imageOutline]]
+\[[imageOutline]]
 |![Desktop Screenshot](/assets/mastermindscreenshot.png)
 
-[[image]]
-|![Mobile Screenshot](/assets/masterminddevicescreen.png)
+\[[image]]
+|![Mobile Screenshot](/assets/masterminddevicescreenwide.png)
