@@ -21,7 +21,3 @@ During my six and a half years at Google, I worked on products I love, helped mi
 - When I was a help writer for products like Gmail and Android, my job was to take complicated concepts and make them as simple as possible for the widest audience imaginable (my articles have been read hundreds of millions of times in 44 languages). Writing code often feels like the same process.
 
 In the end, it wasn’t really a hard decision. Programming lets me use my imagination, problem-solving obsession, and fascination with people in ways that I still find thrilling. Since taking the leap to work for myself, I’ve gotten to work on interesting freelance projects, build my own products, and travel to a few continents!
-
-##### contact
-
-Feel free to reach out about freelance, collaboration, and career opportunities, or just to chat
