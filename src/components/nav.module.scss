@@ -1,9 +1,35 @@
+@import '../styles/mixins.scss';
+
 .nav {
   position: absolute;
   top: 0;
   right: 1.5rem;
+  background-color: white;
+  z-index: 10;
 
   a {
     margin: 0 0 0 1rem;
+  }
+}
+
+.toggleButton {
+  display: none !important;
+}
+
+@include respond-to('small') {
+  .nav {
+    a {
+      margin: 0 0 0 0.5rem;
+    }
+  }
+  .toggleButton {
+    display: inline-block !important;
+  }
+
+  .links {
+    display: none;
+    &.open {
+      display: inline-block;
+    }
   }
 }
