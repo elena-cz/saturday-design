@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import SEO from '../components/seo';
+import Title from '../components/title';
 import styles from './projectTemplate.module.scss';
 
 export default function Template({
@@ -14,7 +15,7 @@ export default function Template({
       <SEO title={frontmatter.title} />
       <div className="project">
         <div className={styles.titleContainer}>
-          <h5>{frontmatter.title}</h5>
+          <Title text={frontmatter.title} htag="h3" />
           {frontmatter.url && (
             <a
               href={frontmatter.url}

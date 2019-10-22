@@ -18,13 +18,16 @@ const Title = ({ text, htag, center }) => (
         display: 'inline-block',
       }}
     >
-      {htag === 'h1' ? (
-        <h1>{text}</h1>
-      ) : (
+      {htag === 'h2' ? (
         <h2>
           <a id={text}></a>
           {text}
         </h2>
+      ) : (
+        <h3>
+          <a id={text}></a>
+          {text}
+        </h3>
       )}
 
       <div className={`${htag}-underline`} />
@@ -39,7 +42,7 @@ Title.propTypes = {
 };
 
 Title.defaultProps = {
-  htag: 'h1',
+  htag: 'h2',
   center: false,
 };
 

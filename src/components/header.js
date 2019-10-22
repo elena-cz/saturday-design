@@ -24,7 +24,7 @@ const Header = ({ page, title }) => (
       </Link>
     </div>
     {/* </CSSTransition> */}
-    <CSSTransition
+    {/* <CSSTransition
       in={!!title}
       timeout={2000}
       classNames="flip-delay"
@@ -32,7 +32,7 @@ const Header = ({ page, title }) => (
       appear
     >
       <Title text={title} htag="h2" center className={styles.title} />
-    </CSSTransition>
+    </CSSTransition> */}
   </header>
 );
 
