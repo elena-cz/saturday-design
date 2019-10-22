@@ -7,9 +7,13 @@
   flex-direction: column;
   justify-content: flex-end;
   box-sizing: border-box;
-  height: 240px;
+  height: 180px;
   width: 100%;
   padding: 0 1.5rem 3rem 1.5rem;
+
+  &.home {
+    height: 240px;
+  }
 }
 
 .logoContainer {
@@ -17,7 +21,7 @@
   top: 0;
   height: auto;
   width: 300px;
-  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.5s 0.1s;
 
   .home & {
     transform-origin: top;

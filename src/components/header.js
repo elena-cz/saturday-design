@@ -6,7 +6,7 @@ import styles from './header.module.scss';
 
 import Nav from './nav';
 import Logo from './logo';
-import Title from './title';
+// import Title from './title';
 
 const Header = ({ page, title }) => (
   <header className={`${styles.header} ${page === 'home' ? styles.home : ''}`}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { CSSTransition } from 'react-transition-group';
 
 import SEO from '../components/seo';
 import Title from '../components/title';
@@ -15,7 +16,15 @@ export default function Template({
       <SEO title={frontmatter.title} />
       <div className="project">
         <div className={styles.titleContainer}>
-          <Title text={frontmatter.title} htag="h3" />
+          <CSSTransition
+            in={!!frontmatter.title}
+            timeout={2000}
+            classNames="flip-delay"
+            unmountOnExit
+            appear
+          >
+            <Title text={frontmatter.title} htag="h3" />
+          </CSSTransition>
           {frontmatter.url && (
             <a
               href={frontmatter.url}
