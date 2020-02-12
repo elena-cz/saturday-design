@@ -1,8 +1,8 @@
 ---
 path: /projects/auction
-order: 2
+order: 3
 date: 2019-10-18T23:56:37.718Z
-title: Real-Time Auction
+title: Real-Time Auction (Client)
 thumbnail: /assets/thumbnail-auction.png
 description: >-
   Built new Vue.js front-ends for participating in and managing fast-paced live
