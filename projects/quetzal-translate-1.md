@@ -24,3 +24,19 @@ backend: 'Firebase (Firestore, Cloud Functions, Auth, Storage)'
 * Offline-capable PWA (Progressive Web App) with a responsive design for mobile, desktop, and everything in between
 * Implemented [Material Design's Backdrop spec](https://material.io/components/backdrop) with smooth animations and extensible design
 * Easy-to-use admin pages for managing translations and uploading audio recordings
+
+
+[[image]]
+| ![Translation & Backdrop Screenshots](/assets/hero_backdrop-optimized.png "Translation & Backdrop")
+
+> Translation & Backdrop
+
+[[image]]
+| ![Offline Promo & Download Flow Screenshots](/assets/offlinepromo_flow-optimized.png "Offline Promo & Download Flow")
+
+> Offline Promo & Download Flow
+
+[[imageOutline]]
+| ![Admin Page Example Screenshot](/assets/quetzal.app_admin-optimized.png "Admin Page Example")
+
+> Admin Page Example
