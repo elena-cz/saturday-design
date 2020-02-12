@@ -1,6 +1,6 @@
 ---
 path: /projects/mastermind
-order: 4
+order: 5
 date: 2019-10-19T00:06:03.612Z
 title: Mastermind Game
 thumbnail: /assets/thumbnail-mastermind.png
