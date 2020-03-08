@@ -33,3 +33,10 @@ collections:
       - { name: urlText, label: URLText, required: false }
       - { name: url, label: URL, required: false }
       - { name: body, label: Body, widget: markdown, required: false }
+      - name: 'tutorials'
+        label: 'Tutorials'
+        widget: 'list'
+        required: false
+        fields:
+          - { name: title, label: Title, required: true }
+          - { name: url, label: URL, required: true }

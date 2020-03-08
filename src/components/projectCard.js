@@ -30,7 +30,7 @@ const ProjectCard = ({
     >
       <Img
         fluid={thumbnail}
-        alt="Mindy's Imagination Thumbnail"
+        alt={title + ' Thumbnail'}
         className={styles.image}
       />
       <div className={styles.text}>
