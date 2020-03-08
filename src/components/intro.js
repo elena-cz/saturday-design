@@ -28,7 +28,7 @@ const Intro = () => {
       <div className={styles.profileContainer}>
         <Img
           fluid={data.profilePhoto.childImageSharp.fluid}
-          alt="Profile Photo"
+          alt="Elena Czubiak Profile Photo"
           className={styles.profilePhoto}
         />
       </div>

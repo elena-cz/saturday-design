@@ -1,7 +1,9 @@
 @charset "utf-8";
 @import './reset.scss';
+@import './variables.scss';
 @import './mixins.scss';
 @import './typography.scss';
+@import './hamburger.scss';
 
 // If need, change your variables before importing Bulma
 
@@ -10,10 +12,22 @@
 
 // @import '~bulma/bulma.sass';
 
+// FOCUS STYLES
 div:focus,
 div:active {
   outline-color: $pink;
 }
+
+.no-outline-on-focus,
+.no-outline-on-focus {
+  outline: none;
+}
+
+// .no-outline-on-focus button:focus,
+// .no-outline-on-focus a:focus {
+//   outline: none !important;
+//   background-color: pink;
+// }
 
 // .image,
 // .imageOutline {
@@ -90,9 +104,6 @@ img {
 
   .project-content {
     margin-top: 1.5rem;
-
-    // .gatsby-resp-image-wrapper {
-    // }
 
     .image,
     .imageOutline {

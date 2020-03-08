@@ -1,13 +1,14 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "saturday-design",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Elena Czubiak's Portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Elena Czubiak",
   "dependencies": {
     "bulma": "^0.7.5",
     "gatsby": "^2.19.19",
     "gatsby-image": "^2.2.21",
+    "gatsby-plugin-google-analytics": "^2.1.23",
     "gatsby-plugin-layout": "^1.1.10",
     "gatsby-plugin-manifest": "^2.2.17",
     "gatsby-plugin-netlify-cms": "^4.1.21",

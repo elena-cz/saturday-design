@@ -1,12 +1,8 @@
 import React from 'react';
 import styles from './toolSection.module.scss';
 
-import Title from './title';
-
 const toolSection = () => (
   <section className={styles.section}>
-    <Title text="favorite tools" htag="h2" />
-
     <div className={styles.container}>
       <div className={styles.tool}>
         <div className={styles.icon}>

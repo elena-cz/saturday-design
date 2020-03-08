@@ -7,47 +7,36 @@
   flex-direction: column;
   justify-content: flex-end;
   box-sizing: border-box;
-  height: 240px;
+  height: 180px;
   width: 100%;
   padding: 0 1.5rem 3rem 1.5rem;
 
   &.home {
-    // justify-content: center;
+    height: 240px;
   }
 }
 
 .logoContainer {
   position: absolute;
   top: 0;
-  // left: 50%;
-  // left: 1.5rem;
   height: auto;
   width: 300px;
-  // transition: transform ease-out 0.5s;
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
 
   .home & {
     transform-origin: top;
-    // transform: translate(50%, 0) scale(1.8);
     transform: translate(calc(50vw - 250px), 1rem) scale(1.8);
-
-    // max-width: 600px;
-    // margin-top: 1.5rem;
-    // margin-bottom: 2rem;
-    // margin-left: -10%;
   }
-}
-
-.title {
 }
 
 @include respond-to('small') {
   .logoContainer {
     max-width: 180px;
     margin-left: 0;
+    transform: translate(calc(50vw - 120px), 3rem) scale(1.8);
 
     .home & {
-      max-width: 100%;
+      transform: translate(calc(50vw - 120px), 3rem) scale(1.8);
     }
   }
 }

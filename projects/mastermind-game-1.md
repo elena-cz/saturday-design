@@ -10,15 +10,16 @@ description: Fun side project to recreate one my favorite games from childhood -
 role: 'Developer, Designer'
 frontend: 'React, Styled Components'
 ---
+
 ###### key features
 
-* Game logic that replicates original game
-* Responsive design
-* Custom color picker, responsively sized for device width
-* CSS animations for revealing code and showing winning or lost game banners
+- Game logic that replicates original game
+- Responsive design
+- Custom color picker, responsively sized for device width
+- CSS animations for revealing code and showing winning or lost game banners
 
 [[imageOutline]]
 |![Desktop Screenshot](/assets/mastermindscreenshot.png)
 
 [[image]]
-|![Mobile Screenshot](/assets/masterminddevicescreen.png)
+|![Mobile Screenshot](/assets/masterminddevicescreenwide.png)

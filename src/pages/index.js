@@ -3,26 +3,29 @@ import { Link } from 'gatsby';
 
 import Image from '../components/image';
 import SEO from '../components/seo';
-// import Layout from '../layouts';
 import Title from '../components/title';
 import Intro from '../components/intro';
 import ToolSection from '../components/toolSection';
 import ProjectSection from '../components/projectSection';
+import AboutSection from '../components/aboutSection';
+import ContactIcons from '../components/contactIcons';
 
 const IndexPage = () => (
   <>
     <SEO title="Home" />
     <Intro />
+    <Title text="favorite tools" htag="h2" />
     <ToolSection />
     <Title text="projects" htag="h2" />
     <ProjectSection />
-    {/* <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> */}
+    <Title text="about" htag="h2" />
+    <AboutSection />
+    <Title text="contact" htag="h2" />
+    <p style={{ marginTop: '1.5rem' }}>
+      Feel free to reach out about freelance, collaboration, and career
+      opportunities, or just to chat
+    </p>
+    <ContactIcons expanded />
   </>
 );
 
