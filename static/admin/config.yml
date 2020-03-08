@@ -40,3 +40,4 @@ collections:
         fields:
           - { name: title, label: Title, required: true }
           - { name: url, label: URL, required: true }
+          - { name: thumbnail, label: Thumbnail, widget: image }
