@@ -1,14 +1,28 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import styles from './tutorialSection.module.scss';
 
-import Title from './title';
+const TutorialSection = () => {
+  // const data = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       markdownRemark(frontmatter: { path: { eq: "/tutorials" } }) {
+  //         frontmatter {
+  //           tutorials
+  //         }
+  //       }
+  //     }
+  //   `
+  // );
 
-const tutorialsSection = () => (
-  <section className={styles.section}>
-    <Title text="tutorials" htag="h2" />
+  // const { markdownRemark } = data;
+  // const { tutorials } = markdownRemark.frontmatter;
 
-    <div className={styles.container}></div>
-  </section>
-);
+  return (
+    <section className={styles.section}>
+      {/* <div className={styles.container}>{tutorials}</div> */}
+    </section>
+  );
+};
 
-export default tutorialSection;
+export default TutorialSection;

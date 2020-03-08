@@ -7,6 +7,7 @@ import Title from '../components/title';
 import Intro from '../components/intro';
 import ToolSection from '../components/toolSection';
 import ProjectSection from '../components/projectSection';
+import TutorialSection from '../components/tutorialSection';
 import AboutSection from '../components/aboutSection';
 import ContactIcons from '../components/contactIcons';
 
@@ -18,6 +19,8 @@ const IndexPage = () => (
     <ToolSection />
     <Title text="projects" htag="h2" />
     <ProjectSection />
+    <Title text="tutorials" htag="h2" />
+    <TutorialSection />
     <Title text="about" htag="h2" />
     <AboutSection />
     <Title text="contact" htag="h2" />
