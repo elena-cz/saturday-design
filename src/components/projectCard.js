@@ -22,7 +22,7 @@ const ProjectCard = ({
       onKeyPress={e => {
         navigate(path);
       }}
-      className={`${styles.container} ${featured ? styles.featured : ''} card`}
+      className={`${styles.card} ${featured ? styles.featured : ''} card`}
       role="button"
       tabIndex="0"
     >

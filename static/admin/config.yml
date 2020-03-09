@@ -14,7 +14,12 @@ collections:
       - { name: order, label: Order, widget: number }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: thumbnail, label: Thumbnail, widget: image }
+      - {
+          name: thumbnail,
+          label: Thumbnail,
+          widget: image,
+          hint: "1200 x 800 & filname should start with 'thumbnail-'",
+        }
       - { name: urlText, label: URLText, required: false }
       - { name: url, label: URL, required: false }
       - { name: description, label: Description, required: false }
@@ -40,4 +45,9 @@ collections:
         fields:
           - { name: title, label: Title, required: true }
           - { name: url, label: URL, required: true }
-          - { name: thumbnail, label: Thumbnail, widget: image }
+          - {
+              name: thumbnail,
+              label: Thumbnail,
+              widget: image,
+              hint: " 400 x 200 & filname should start with 'tutorial-'",
+            }

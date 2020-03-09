@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-// import styles from './tutorialSection.module.scss';
+import Img from 'gatsby-image';
+import styles from './tutorialSection.module.scss';
 
 const TutorialSection = () => {
   const data = useStaticQuery(
@@ -11,6 +12,19 @@ const TutorialSection = () => {
             tutorials {
               title
               url
+              thumbnail
+            }
+          }
+        }
+        images: allFile(filter: { relativePath: { regex: "/thumbnail/" } }) {
+          edges {
+            node {
+              relativePath
+              childImageSharp {
+                fluid(maxWidth: 400, quality: 90) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
@@ -22,22 +36,15 @@ const TutorialSection = () => {
   const { tutorials } = markdownRemark.frontmatter;
 
   return (
-    <section
-      style={{
-        width: '100%',
-        maxWidth: '800px',
-        margin: '1.5rem auto 4rem 0',
-      }}
-    >
-      <ul>
-        {tutorials.map(({ title, url }) => (
-          <li>
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              {title}
-            </a>
-          </li>
-        ))}
-      </ul>
+    <section className={styles.section}>
+      {tutorials.map(({ title, url, thumbnail }) => (
+        <div className={`${styles.card} card`} key={title}>
+          <Img fluid={thumbnail} alt="Thumbnail" className={styles.image} />
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {title}
+          </a>
+        </div>
+      ))}
     </section>
   );
 };

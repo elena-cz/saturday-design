@@ -1,0 +1,20 @@
+.section {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 1.5rem -1rem;
+  margin-bottom: 4rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 1rem;
+}
+
+.image {
+  width: 200px;
+}

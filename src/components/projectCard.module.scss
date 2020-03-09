@@ -1,6 +1,6 @@
 @import '../styles/mixins.scss';
 
-.container {
+.card {
   display: flex;
   flex-direction: column;
   width: calc(50% - 1rem);
@@ -50,7 +50,7 @@
 }
 
 @include respond-to('small') {
-  .container {
+  .card {
     width: 100%;
   }
   .image {
