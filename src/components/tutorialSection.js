@@ -16,7 +16,7 @@ const TutorialSection = () => {
             }
           }
         }
-        images: allFile(filter: { relativePath: { regex: "/thumbnail/" } }) {
+        images: allFile(filter: { relativePath: { regex: "/tutorial-/" } }) {
           edges {
             node {
               relativePath
@@ -32,18 +32,36 @@ const TutorialSection = () => {
     `
   );
 
-  const { markdownRemark } = data;
+  const { markdownRemark, images } = data;
   const { tutorials } = markdownRemark.frontmatter;
+  const thumbnails = {};
+  images.edges.forEach(image => {
+    const { node } = image;
+    // EX 'tutorial-vuex.png' -> 'tutorial-vuex'
+    const name = node.relativePath.slice(0, -4);
+    thumbnails[name] = node.childImageSharp.fluid;
+  });
 
   return (
     <section className={styles.section}>
       {tutorials.map(({ title, url, thumbnail }) => (
-        <div className={`${styles.card} card`} key={title}>
-          <Img fluid={thumbnail} alt="Thumbnail" className={styles.image} />
-          <a href={url} target="_blank" rel="noopener noreferrer">
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${styles.card} card`}
+          key={title}
+        >
+          <Img
+            fluid={thumbnails[thumbnail.slice(8, -4)]}
+            alt="Thumbnail"
+            className={styles.image}
+          />
+          {title}
+          {/* <a href={url} target="_blank" rel="noopener noreferrer">
             {title}
-          </a>
-        </div>
+          </a> */}
+        </a>
       ))}
     </section>
   );

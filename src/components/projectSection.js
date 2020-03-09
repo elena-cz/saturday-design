@@ -46,12 +46,14 @@ const ProjectSection = () => {
   const { allMarkdownRemark, images } = data;
   const projects = allMarkdownRemark.edges.map(project => {
     const { frontmatter } = project.node;
+    // ex: '/assets/thumbnail-imagination.png' -> 'thumbnail-imagination'
     frontmatter.thumbnailName = frontmatter.thumbnail.slice(8, -4);
     return frontmatter;
   });
   const thumbnails = {};
   images.edges.forEach(image => {
     const { node } = image;
+    // ex: 'thumbnail-imagination.png' -> 'thumbnail-imagination'
     const name = node.relativePath.slice(0, -4);
     thumbnails[name] = node.childImageSharp.fluid;
   });
