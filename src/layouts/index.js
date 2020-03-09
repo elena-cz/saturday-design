@@ -32,7 +32,10 @@ const Layout = ({ children, pageContext }) => {
       />
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
-        © {new Date().getFullYear()} Elena Czubiak
+        <p style={{ marginBottom: '0.5rem' }}>
+          © {new Date().getFullYear()} Elena Czubiak
+        </p>
+        <p style={{ fontSize: 'small' }}>Made with Gatsby & Netlify CMS</p>
       </footer>
     </div>
   );

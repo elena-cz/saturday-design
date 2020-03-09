@@ -51,6 +51,8 @@ const TutorialSection = () => {
           rel="noopener noreferrer"
           className={`${styles.card} card`}
           key={title}
+          role="button"
+          tabIndex="0"
         >
           <Img
             fluid={thumbnails[thumbnail.slice(8, -4)]}

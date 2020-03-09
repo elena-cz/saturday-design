@@ -7,8 +7,8 @@
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
 
-  h4 {
-    margin-bottom: 20px;
+  h3 {
+    margin-right: 1rem;
   }
 }
 
@@ -19,7 +19,7 @@
 .introContainer {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  flex-wrap: wrap;
   // h6 {
   //   margin-bottom: 0.3rem;
   // }
@@ -28,11 +28,16 @@
 .introContent {
   min-width: calc(50% - 1rem);
   width: calc(50% - 1rem);
+  margin-top: 1rem;
 }
 
 @include respond-to('small') {
   .introContent {
     min-width: 100%;
     width: 100%;
+  }
+
+  .urlButton {
+    margin-top: 1rem;
   }
 }

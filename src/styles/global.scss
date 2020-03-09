@@ -95,6 +95,11 @@ img {
   box-shadow: $drop-shadow;
 }
 
+.card:focus,
+.card:active {
+  outline-color: $pink;
+}
+
 // PROJECT PAGE STYLES
 
 .project {
