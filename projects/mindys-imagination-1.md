@@ -7,7 +7,8 @@ thumbnail: /assets/thumbnail-imagination.png
 urlText: mindysimagination.com
 url: 'https://mindysimagination.com/'
 description: >-
-  I co-founded Mindy’s Imagination and designed and built an app to showcase our
+  Update: Relaunching soon as Imaginarie on the App Store and Google Play! I
+  co-founded Mindy’s Imagination and designed and built an app to showcase our
   unique and accessible meditation technique. It’s a fully functional PWA
   (Progressive Web App) that works on nearly every device, with offline access
   to all content.
@@ -40,6 +41,6 @@ backend: >-
 > Homepage
 
 \[[imageOutline]]
-| ![Admin page screenshot](/assets/admin.png "Admin Page")
+| ![Admin page Screenshot](/assets/admin.png "Admin Page")
 
 > Admin Page
