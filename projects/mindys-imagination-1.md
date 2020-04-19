@@ -19,28 +19,27 @@ backend: >-
   Firebase (Firestore, Cloud Functions, Auth, Storage), Stripe payment
   processing
 ---
-
 ###### key features
 
-- Responsive design for mobile, desktop, and everything in between
-- Installable on iOS, Android, and more
-- Offline-capable on most devices
-- Responsive swiping between pages (custom code to get as close as possible to native app page swiping)
-- Subscription payment & management within app (with Stripe backend)
-- Easy-to-use admin pages for managing content (not user-visible, but some of my favorite pages!)
-- Simple, relaxing, & whimsical app design to match content and help get our users into the right mental state for meditation
+* Responsive design for mobile, desktop, and everything in between
+* Installable on iOS, Android, and more
+* Offline-capable on most devices
+* Responsive swiping between pages (custom code to get as close as possible to native app page swiping)
+* Subscription payment & management within app (with Stripe backend)
+* Easy-to-use admin pages for managing content (not user-visible, but some of my favorite pages!)
+* Simple, relaxing, & whimsical app design to match content and help get our users into the right mental state for meditation
 
-[[image]]
-| ![App Screenshots](/assets/appexamplescreensindevices.png 'App Screenshots')
+\[[image]]
+| ![App Screenshots](/assets/appexamplescreensindevices.png "App Screenshots")
 
 > App Screenshots
 
-[[imageOutline]]
-| ![Homepage Screenshot](/assets/homepagesample-9-19.png)
+\[[imageOutline]]
+| ![Homepage Screenshot](/assets/landing.png)
 
 > Homepage
 
-[[imageOutline]]
-| ![Admin page screenshot](/assets/screen-shot-2019-09-13-at-2.23.24-pm.png 'Admin Page')
+\[[imageOutline]]
+| ![Admin page screenshot](/assets/admin.png "Admin Page")
 
 > Admin Page
