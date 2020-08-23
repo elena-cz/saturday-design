@@ -34,3 +34,13 @@ backend: 'Firebase (Firestore, Cloud Functions, Auth, Storage), Revenue Cat'
 - Responsive design for mobile, desktop, and everything in between
 - Easy-to-use admin pages for managing content (not user-visible, but some of my favorite pages!)
 - Simple, relaxing, & whimsical app design to match content and help get our users into the right mental state for meditation
+
+[[image]]
+| ![App Screenshots](/assets/imaginarie-thumbnail.png 'App Screenshots')
+
+> App Screenshots
+
+[[imageOutline]]
+| ![Admin page screenshot](/assets/admin.png 'Admin Page')
+
+> Admin Page
