@@ -29,11 +29,11 @@ backend: 'Firebase (Firestore, Cloud Functions, Auth, Storage), Revenue Cat'
 
 - Vue app works on iOS, Android and web with Capacitor as a native wrapper
 - Custom native audio plugins for Android and iOS for smooth playback and notification/Now Playing integration
-- Subscriptions managed with Revenue Cat to consolidate cross-platform subscriptions
 - Responsive swiping between pages (custom code to get as close as possible to native app page swiping)
+- Subscriptions managed with Revenue Cat to consolidate cross-platform subscriptions
 - Responsive design for mobile, desktop, and everything in between
 - Easy-to-use admin pages for managing content (not user-visible, but some of my favorite pages!)
-- Simple, relaxing, & whimsical app design to match content and help get our users into the right mental state for meditation
+- S relaxing, & fun app design to match content and help get our users into the right mental state for meditation
 
 [[image]]
 | ![App Screenshots](/assets/imaginarie-thumbnail.png 'App Screenshots')
