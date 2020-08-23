@@ -10,5 +10,10 @@ description: >-
   Imaginarie is a fun, imagination-focused meditation app. It's a hybrid mobile
   app built mostly in Vue, with custom Java and Swift code for key features like
   audio playback and subscriptions.
+role: 'Founder, Developer, Designer, Branding'
+frontend: >-
+  Vue, Capacitor, Java, Swift, Vuetify, Sass, Hammer.js, HTML5 Audio
+  (Howler.js), Google Analytics
+backend: 'Firebase (Firestore, Cloud Functions, Auth, Storage), Revenue Cat'
 ---
 
