@@ -33,7 +33,7 @@ backend: 'Firebase (Firestore, Cloud Functions, Auth, Storage), Revenue Cat'
 - Subscriptions managed with Revenue Cat to consolidate cross-platform subscriptions
 - Responsive design for mobile, desktop, and everything in between
 - Easy-to-use admin pages for managing content (not user-visible, but some of my favorite pages!)
-- S relaxing, & fun app design to match content and help get our users into the right mental state for meditation
+- Relaxing, & fun app design to match content and help get our users into the right mental state for meditation
 
 [[image]]
 | ![App Screenshots](/assets/imaginarie-thumbnail.png 'App Screenshots')
